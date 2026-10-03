@@ -1,3 +1,10 @@
+-- Bring data from snowflake EMPLOYEE_RAW table
+
+-- WITH employee AS (
+--     SELECT * FROM DBT_DB.PUBLIC.EMPLOYEE_RAW
+-- )
+-- SELECT * FROM employee;
+
 -- Configuration
 {{ 
     config
@@ -5,12 +12,6 @@
         materialized = 'table'
     )
 }}
-
-
--- WITH employee AS (
---     SELECT * FROM DBT_DB.PUBLIC.EMPLOYEE_RAW
--- )
--- SELECT * FROM employee;
 
 -- Transformation of data
 WITH employee AS (
