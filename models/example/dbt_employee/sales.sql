@@ -24,6 +24,4 @@ with sales_src as
     where CREATED_AT > (select max(INSERT_DTS) from {{this}})
     {% endif %}
 )
-
-
 select * from sales_src
