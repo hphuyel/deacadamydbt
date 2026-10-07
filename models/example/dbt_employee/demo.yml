@@ -31,6 +31,9 @@ models:
     description: "DBT Ephemeral Model for the celan orders"
   - name: final_orders
     description: "DBT Model for the final order Model"
+  - name: session 
+    description: "DBT Model for the sesion table"
+
 
 sources:
   - name: employee
@@ -68,5 +71,10 @@ sources:
     schema: PUBLIC
     tables:
       - name: PATIENT_SRC
+  - name: session 
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: SESSION_SRC
  
   
