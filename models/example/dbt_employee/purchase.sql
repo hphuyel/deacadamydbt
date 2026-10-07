@@ -20,7 +20,7 @@ with purchase_src as
     from {{source('purchase', 'PURCHASE_SRC')}}
 
     {% if is_incremental() %}
-    where CREATE_AT>(select max(UPDATE_DTS) from {{this}})
+    where CREATED_AT>(select max(UPDATE_DTS) from {{this}})
     {% endif %}
 )
 
